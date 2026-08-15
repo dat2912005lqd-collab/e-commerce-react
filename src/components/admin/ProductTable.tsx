@@ -1,4 +1,4 @@
-import type { Product } from "../../types/products";
+import type { Product } from "../../types/product";
 
 interface ProductTableProps {
   products: Product[];
@@ -41,9 +41,9 @@ export default function ProductTable({
               <td>{product.id}</td>
 
               <td>
-                {product.images?.[0] ? (
+                {product.images?.[0] || product.image ? (
                   <img
-                    src={product.images[0]}
+                    src={product.images?.[0] || product.image}
                     alt={product.title}
                     width={70}
                     height={70}

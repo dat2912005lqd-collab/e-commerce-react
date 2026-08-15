@@ -28,7 +28,7 @@ export const cartService={
                 title:product.title,
                 price:product.price,
                 image:product.images?.[0],
-                slug:product.slug,qty
+                qty
             });
         }
         saveCart(cart);
@@ -47,7 +47,7 @@ export const cartService={
             }
             saveCart(cart);
             return cart;
-        }
+        },
         remove(productId:number):CartItem[]{
             const cart=getCart().filter(
                 (item)=>item.productId!==productId 
@@ -58,7 +58,7 @@ export const cartService={
      clear():void{ saveCart([])},
      subtotal():number{
         return getCart().reduce(
-            (total,item)=>total+item.price+item.qty,0
+            (total,item)=>total+item.price*item.qty,0
         );
      }, 
 }

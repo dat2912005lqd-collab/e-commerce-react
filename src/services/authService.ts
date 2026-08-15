@@ -1,11 +1,11 @@
 import axiosClient from "../api/axiosClient";
 import { API_ENDPOINTS } from "../api/endpoints";
-import type{
+import type {
     LoginRequest,
     LoginResponse,
-    RefreshTokenRequest,
 } from "../types/auth";
 import type { User } from "../types/user";
+
 export const authService = {
     async login(data: LoginRequest): Promise<LoginResponse> {
         const response = await axiosClient.post<LoginResponse>(API_ENDPOINTS.LOGIN, data);
@@ -15,8 +15,8 @@ export const authService = {
         const response = await axiosClient.get<User>(API_ENDPOINTS.PROFILE);
         return response.data;
     },
-    async refreshToken(data: RefreshTokenRequest): Promise<LoginResponse> {
-        const response = await axiosClient.post<LoginResponse>(API_ENDPOINTS.REFRESH_TOKEN, data);
+    async refreshToken(refreshToken: string): Promise<LoginResponse> {
+        const response = await axiosClient.post<LoginResponse>(API_ENDPOINTS.REFRESH_TOKEN, { refreshToken });
         return response.data;
     },
 };

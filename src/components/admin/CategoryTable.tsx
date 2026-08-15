@@ -38,7 +38,6 @@ export default function CategoryTable({
           {categories.map((category) => (
             <tr key={category.id}>
               <td>{category.id}</td>
-
               <td>
                 <img
                   src={category.image}
@@ -47,11 +46,8 @@ export default function CategoryTable({
                   height={60}
                 />
               </td>
-
               <td>{category.name}</td>
-
               <td>{category.slug ?? "-"}</td>
-
               <td>
                 <button
                   type="button"

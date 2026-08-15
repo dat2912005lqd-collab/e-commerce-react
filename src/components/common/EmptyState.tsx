@@ -3,7 +3,7 @@ interface EmptyStateProps {
 }
 export default function EmptyState({ message = "No data available." }: EmptyStateProps) {
     return(
-        <div role="status" "aria-label"="status message">
+        <div role="status" aria-label="status message">
             <p>{message}</p>
         </div>
     );

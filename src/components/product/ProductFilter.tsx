@@ -19,7 +19,7 @@ export default function ProductFilter({
         const min=priceMin?Number(priceMin):undefined;
         const max=priceMax?Number(priceMax):undefined;
         onChange({
-           categoryId:categoryId?Number(categoryId):underfined,
+           categoryId:categoryId?Number(categoryId):undefined,
            priceMin:min, priceMax:max
         });
     };
@@ -27,7 +27,7 @@ export default function ProductFilter({
         <div>
             <select
             value={categoryId}
-            onChange={{event}=>
+            onChange={(event) =>
             setCategoryId(event.target.value)}
             >
                 <option value="">

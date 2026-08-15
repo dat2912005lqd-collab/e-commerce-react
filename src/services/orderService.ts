@@ -19,21 +19,25 @@ function generateOrderId():string{
 export const orderService={
     create(form:CheckoutForm, cart:CartItem[], userId:number):LocalOrder{
         const subtotal=cart.reduce(
-            (total,item)=>total+item.price+item.qty,0);
+            (total,item)=>total+item.price*item.qty,0);
         const order:LocalOrder={
-            id:generateOrderId(), userId,
-            item:cart, subtotal,
+            id:generateOrderId(), 
+            userId,
+            items:cart, 
+            subtotal,
             customerName:form.customerName,
             phone:form.phone,
+            address:form.address,
             note:form.note??"",
             status:"confirmed",
-            createdAt:newDate.toISOString(),
+            createdAt:new Date().toISOString(),
         };
-    const order=getOrders();
-    setStorageItem(STORAGE_KEYS.ORDER,order);
-    return order;
-},
-listbyUser(userId:number):LocalOrder[]{
-    return getOrders().filter((order)=>order.userId===userId);
-},
+        const orders=getOrders();
+        orders.push(order);
+        setStorageItem(STORAGE_KEYS.ORDER,orders);
+        return order;
+    },
+    listByUser(userId:number):LocalOrder[]{
+        return getOrders().filter((order)=>order.userId===userId);
+    },
 };
