@@ -10,7 +10,7 @@ interface CartState {
   addItem: (item: CartItem) => void;
   updateQuantity: (
     productId: number,
-    qty: number
+    Quantity: number
   ) => void;
   removeItem: (productId: number) => void;
   clearCart: () => void;

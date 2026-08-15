@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 const BASE_URL =
-  import.meta.env.VITE_API_BASE_URL;
+  import.meta.env.VITE_API_URL;
 
 describe("E-commerce API checklist", () => {
   it("GET /products?offset=0&limit=2", async () => {

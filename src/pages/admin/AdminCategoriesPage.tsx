@@ -37,7 +37,7 @@ export default function AdminCategoriesPage() {
   }, []);
 
   const handleDelete = async (
-    id: number
+  category:Category
   ) => {
     if (
       !window.confirm(
@@ -47,7 +47,7 @@ export default function AdminCategoriesPage() {
       return;
     }
 
-    await categoryService.deleteCategory(id);
+    await categoryService.deleteCategory(category.id);
 
     await loadCategories();
   };

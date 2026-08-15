@@ -1,4 +1,4 @@
-import type {Product } from "../types/product";
+import type {Product } from "../types/products";
 import type {CartItem} from "../types/cart";
 import {STORAGE_KEYS } from "../constants/storageKeys";
 import{
@@ -27,7 +27,7 @@ export const cartService={
                 productId:product.id,
                 title:product.title,
                 price:product.price,
-                image:product.images?.[0],
+                image:product.image?.[0],
                 qty
             });
         }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { productService } from "../../services/productService";
-import type { Product } from "../../types/product";
+import type { Product } from "../../types/products";
 import ProductCard from "../../components/product/ProductCard";
 
 export default function ProductsPage() {

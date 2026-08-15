@@ -20,7 +20,7 @@ export default function ProductGrid({
             key={product.id}
             product={product}
             />
-        ))}
+            )}
         </div>
     );
 }

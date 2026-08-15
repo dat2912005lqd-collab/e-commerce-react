@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { categoryService } from "../../services/categoryService";
 import type { Category, CreateCategoryRequest } from "../../types/category";
-import ImageUpload from "./ImageUpload";
+import ImageUpload from "./ImageUpload"
 
 interface CategoryFormProps {
   category?: Category | null;
@@ -98,5 +98,4 @@ export default function CategoryForm({
       )}
     </form>
   );
-}
 }

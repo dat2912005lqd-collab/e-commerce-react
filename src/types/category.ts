@@ -3,11 +3,10 @@ export interface Category {
     name: string;
     image: string;
     slug?: string;
+    description?:string;
 }
 export interface CreateCategoryRequest {
     name: string;
     image: string;
 }
-export interface UpdateCategoryRequest {
-    Partial<CreateCategoryRequest>;
-}
+export type UpdateCategoryRequest=Partial<CreateCategoryRequest>;

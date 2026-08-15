@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { productService } from "../../services/productService";
 import ProductTable from "../../components/admin/ProductTable";
 
-import type { Product } from "../../types/product";
+import type { Product } from "../../types/products";
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);

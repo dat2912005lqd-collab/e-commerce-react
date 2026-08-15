@@ -20,8 +20,8 @@ export default function AdminSidebar(){
                 <h2>Admin</h2>
             </div>
             <nav>
-                {menuItems.map((item)
-            =><NavLink
+                {menuItems.map((item)=>
+                <NavLink
             key={item.path}
             to={item.path}
             end={item.path==="/admin"}>

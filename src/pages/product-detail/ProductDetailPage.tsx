@@ -16,8 +16,8 @@ const ProductDetailPage = () => {
     if (id && products.length > 0) {
       const found = products.find(p => p.id === Number(id));
       setProduct(found || null);
-      if (found?.categoryId) {
-        const relatedProducts = products.filter(p => p.categoryId === found.categoryId && p.id !== found.id).slice(0, 4);
+      if (found?.category) {
+        const relatedProducts = products.filter(p => p.category === found.category && p.id !== found.id).slice(0, 4);
         setRelated(relatedProducts);
       }
     }
@@ -28,7 +28,7 @@ const ProductDetailPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid md:grid-cols-2 gap-8">
-        <img src={product.image || product.images?.[0] || 'https://placehold.co/400x400'} alt={product.title} className="w-full rounded shadow" />
+        <img src={product.image?.[0] || ''} alt={product.title} className="w-full rounded shadow" />
         <div>
           <h1 className="text-3xl font-bold">{product.title}</h1>
           <p className="text-2xl text-red-500 font-bold mt-2">${product.price}</p>

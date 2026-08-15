@@ -5,7 +5,7 @@ import type {
   Product,
   ProductQueryParams,
   UpdateProductRequest,
-} from "../types/product";
+} from "../types/products";
 
 export const productService = {
   async getProducts(
@@ -20,8 +20,8 @@ export const productService = {
             limit: params.limit ?? 12,
             title: params.title,
             price: params.price,
-            price_min: params.price_min,
-            price_max: params.price_max,
+            price_min: params.minPrice,
+            price_max: params.maxPrice,
             categoryId: params.categoryId,
             categorySlug: params.categorySlug,
           },

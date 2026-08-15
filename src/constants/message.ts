@@ -35,5 +35,4 @@ export const MESSAGE={
         EMPTY_CART:"Giỏ hàng đang trống.",
         SUCCESS:"Đặt hàng thành công."
     }, 
-}
-as const;
+}as const;

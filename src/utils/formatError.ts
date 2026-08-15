@@ -4,9 +4,8 @@ export function formatError(error:unknown):string {
     }
     if (error&&typeof error==="object"&&"message"in error){
         const message=(error as {message?:unknown}).message;
-    }
-    if (typeof message==="string"){
-        return message;
+    if (typeof onmessage==="string"){
+        return onmessage;
     }
 }
 return "Đã xảy ra lỗi. Vui lòng thử lại.";

@@ -5,7 +5,7 @@ import {
 import type {
   Product,
   ProductQueryParams,
-} from "../types/product";
+} from "../types/products";
 export function useProducts(
   params: ProductQueryParams = {}
 ) {
@@ -39,8 +39,8 @@ export function useProducts(
     params.limit,
     params.title,
     params.price,
-    params.price_min,
-    params.price_max,
+    params.minPrice,
+    params.maxPrice,
     params.categoryId,
     params.categorySlug,
   ]);

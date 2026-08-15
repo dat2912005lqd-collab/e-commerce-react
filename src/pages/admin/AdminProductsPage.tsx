@@ -7,7 +7,7 @@ import {
 import ProductForm from "../../components/admin/ProductForm";
 import { productService } from "../../services/productService";
 
-import type { Product } from "../../types/product";
+import type { Product } from "../../types/products";
 
 export default function AdminProductFormPage() {
   const { id } = useParams<{
@@ -32,7 +32,7 @@ export default function AdminProductFormPage() {
             Number(id)
           );
 
-        setProduct(data);
+        setProduct(data as any);
       } finally {
         setLoading(false);
       }
@@ -54,7 +54,7 @@ export default function AdminProductFormPage() {
       </h1>
 
       <ProductForm
-        product={product}
+        product={product} 
         onSuccess={() =>
           navigate(
             "/admin/products"

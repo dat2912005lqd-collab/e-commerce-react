@@ -1,4 +1,4 @@
-import type { Product } from "../../types/product";
+import type { Product } from "../../types/products";
 
 interface ProductTableProps {
   products: Product[];
@@ -39,18 +39,17 @@ export default function ProductTable({
           {products.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
-
               <td>
-                {product.images?.[0] || product.image ? (
-                  <img
-                    src={product.images?.[0] || product.image}
-                    alt={product.title}
-                    width={70}
-                    height={70}
-                  />
+               {product.image?.[0] ? ( 
+                <img
+                  src={product.image[0]} 
+                  alt={product.title}
+                  width={70}
+                  height={70}
+                />
                 ) : (
-                  "-"
-                )}
+                 "-"
+                )} 
               </td>
 
               <td>{product.title}</td>

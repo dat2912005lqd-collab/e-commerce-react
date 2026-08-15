@@ -16,10 +16,10 @@ if (!categories.length){
 }
 return (
     <div>
-        {Categories.map((category)=>(
+        {categories.map((category)=>(
             <CategoryCard
             key={category.id}
-            category={Category}/>
+            category={category}/>
         )
         )}
     </div>

@@ -38,7 +38,7 @@ export default function ProductFilter({
                 key={category.id}
                 value={category.id}
                 >{ category.name}</option>
-                ))}
+                )}
             </select>
        <input
         type="number"
