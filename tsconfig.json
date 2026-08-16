@@ -23,8 +23,9 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "noImplicitAny": false
-  },
+    "noImplicitAny": false,
+    "ignoreDeprecations": "6.0"
+  }, 
   "include": [
     "src"
   ]

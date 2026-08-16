@@ -1,4 +1,4 @@
-import { fileService } from "../services/fileService"; // Sửa đường dẫn từ rservices -> services
+import fileService  from "../../services/fileService"; // Sửa đường dẫn từ rservices -> services
 import { useState } from "react";
 interface ImageUploadProps {
     value?: string;

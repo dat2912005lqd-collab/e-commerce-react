@@ -4,6 +4,7 @@ export function useAuth(){
     const accessToken=useAuthStore(( state)=>state.accessToken);
     const setSession=useAuthStore((state)=>state.setSession)
     const clearSession=useAuthStore((state)=>state.clearSession);
+
     return{
         user, accessToken,
         isAuthenticated:Boolean(accessToken&&user),
