@@ -3,8 +3,8 @@ export const API_ENDPOINTS = {
     PRODUCTS: "/products",
     CATEGORIES: "/categories",
     USERS: "/users",
-    PROFILE: "/auth/profile",
+    PROFILE: "/users",
     REFRESH_TOKEN: "/auth/refresh-token",
-    CHECK_EMAIL: "/auth/check-email",
+    CHECK_EMAIL: "/auth/is-available",
     UPLOAD_FILES: "/files/upload",
 } as const;
