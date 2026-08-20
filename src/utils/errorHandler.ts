@@ -13,10 +13,12 @@ export function handleError(error:unknown):ApiError{
         };
     }
     if (error instanceof Error){
-        return {message:error.message,};
+        return {message:error.message,
+            status:"500"
+        };
     }
     return {
         message:"Đã xảy ra lỗi. Vui lòng thử lại.",
-        status:500
+        status:"500"
     };
 }

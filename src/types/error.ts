@@ -2,7 +2,7 @@ export interface ApiError{
     message:string;
     status?:string;
     code?:string;
-    detailt?:string;
+    detail?:string;
 }
 export interface ErrorResponse{
     message?:string;

@@ -1,5 +1,5 @@
 import axiosClient from "../api/axiosClient";
-import { API_ENDPOINTS } from "../api/endpoints";
+import { API_ENDPOINTS } from "../constants/api";
 import type {
     LoginRequest,
     LoginResponse,

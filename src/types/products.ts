@@ -5,12 +5,12 @@ export interface Product {
     slug: string;
     price:number;
     description: string;
-    image: string[];
+    images: string[];
     category: Category;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
     discountPercentage?:number;
-    categoryId:number;
+    categoryId?:number;
 }
 export interface ProductQueryParams {
     offset?: number;
