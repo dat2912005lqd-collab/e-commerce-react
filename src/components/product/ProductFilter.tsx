@@ -8,9 +8,25 @@ export interface ProductFilterValue{
 interface ProductFilterProps{
     categories:Category[];
     onChange:(filters:ProductFilterValue)=>void;
-}
+    selectedCategoryId?: number | null;
+    onSelectCategory?: (id: number | null) => void;
+    priceRange?: [number, number];
+    onPriceChange?: (range: [number, number]) => void;
+    sortBy?: string;
+    onSortChange?: (sort: string) => void;
+    onReset?: () => void;
+    totalProductsCount?: number;
+  }
 export default function ProductFilter({
-    categories, onChange
+    categories, onChange,
+    selectedCategoryId,
+    onSelectCategory,
+    priceRange,
+    onPriceChange,
+    sortBy,
+    onSortChange,
+    onReset,
+    totalProductsCount
 }:ProductFilterProps){
     const[categoryId, setCategoryId]= useState("");
     const[priceMin, setPriceMin]=useState("");

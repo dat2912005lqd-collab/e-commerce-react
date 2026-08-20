@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Lock, Mail, ArrowRight, ShieldCheck, UserCheck, AlertCircle } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
-import { ApiEndpointBadge } from '../../components/common/ApiEndpointBadge';
+import  { ApiEndpointBadge}  from '../../components/common/ApiEndpointBadge';
 
 export const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');

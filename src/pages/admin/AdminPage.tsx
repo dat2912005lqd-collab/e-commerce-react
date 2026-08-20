@@ -39,15 +39,13 @@ export const AdminPage: React.FC = () => {
     imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80',
   });
   const [formSubmitting, setFormSubmitting] = useState(false);
-
-  // Subscribe to live API network logs
+   
   useEffect(() => {
     const unsubscribe = subscribeToApiLogs((newLog) => {
       setLogs((prev) => [newLog, ...prev.slice(0, 30)]);
     });
-    return unsubscribe;
+    return unsubscribe; // Đã sửa: Bỏ dấu ngoặc đơn ()
   }, []);
-
   const loadAllData = async () => {
     setLoading(true);
     try {

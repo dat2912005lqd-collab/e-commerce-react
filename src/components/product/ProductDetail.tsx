@@ -23,7 +23,7 @@ export default function ProductDetail({
   return (
     <section>
       <ProductGallery
-        images={product.image ?? []}
+        images={product.images ?? []}
         title={product.title}
       />
       <div>

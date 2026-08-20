@@ -71,7 +71,7 @@ export default function ProductForm({
     setTitle(product.title);
     setPrice(String(product.price));
     setDescription(product.description);
-    setImages(product.image ?? []);
+    setImages(product.images ?? []);
     setCategoryId(String(product.category.id));
   }, [product]);
 

@@ -7,7 +7,7 @@ export function productToCreatePayload(product: Product): CreateProductRequest {
         title: product.title,
         price: product.price,
         description: product.description,
-        images: product.image,
-        categoryId: product.categoryId,
+        images: product.images,
+        categoryId: product.categoryId??1,
     };
     }

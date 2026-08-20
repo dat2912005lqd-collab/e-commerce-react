@@ -18,7 +18,7 @@ export const CategoryPage: React.FC = () => {
     PlatziApi.getCategories().then((cats) => {
       setCategories(cats);
       if (id) {
-        const found = cats.find((c) => c.id === Number(id));
+        const found = cats.find((c) => c.id === (id? Number(id):0));
         setActiveCategory(found || null);
       }
     });

@@ -1,4 +1,4 @@
-import type { Category } from "./category";
+import type { Category } from "./index";
 export interface Product {
     id: number;
     title: string;
@@ -11,6 +11,9 @@ export interface Product {
     updatedAt?: string;
     discountPercentage?:number;
     categoryId?:number;
+    rating?: number;
+    stock?: number;
+    creationAt?: string;
 }
 export interface ProductQueryParams {
     offset?: number;

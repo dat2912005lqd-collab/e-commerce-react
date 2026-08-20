@@ -40,9 +40,9 @@ export default function ProductTable({
             <tr key={product.id}>
               <td>{product.id}</td>
               <td>
-               {product.image?.[0] ? ( 
+               {product.images?.[0] ? ( 
                 <img
-                  src={product.image[0]} 
+                  src={product.images[0]} 
                   alt={product.title}
                   width={70}
                   height={70}

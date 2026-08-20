@@ -14,7 +14,7 @@ import {
   Sparkles 
 } from 'lucide-react';
 import { PlatziApi } from '../../services/api';
-import { Product } from '../../types';
+import { Product } from '../../types/index';
 import { useCart } from '../../context/CartContext';
 import ProductCard from '../../components/product/ProductCard';
 

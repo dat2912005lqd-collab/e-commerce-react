@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ProductsPage from "../pages/products/ProductsPage";
+import {ProductsPage} from "../pages/products/ProductsPage";
 export default function AppRoutes() {
   return (
     <BrowserRouter>

@@ -17,6 +17,9 @@ export interface Product {
   updatedAt?: string;
   rating?: number;
   stock?: number;
+  slug?:string;
+  discountPercentage?: number;
+  categoryId?: number;
 }
 
 export interface User {
@@ -51,3 +54,4 @@ export interface ApiLog {
   status: number;
   durationMs: number;
 }
+export * from './products';
